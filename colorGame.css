@@ -3,26 +3,91 @@
 }
 
 body {
-  background-color: #232323;
+  background-color: #dcdcdc;
   color: snow;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Avenir', sans-serif;
 }
 
-h1,
-h2 {
+.top {
+  height: 170px;
+  padding: 10px;
+  background-color: steelblue;
+}
+
+h1 {
   text-align: center;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+
+#color {
+  font-size: 2.5rem;
+  display: block;
+  color: black;
+  text-transform: lowercase;
+}
+
+#feedback {
+  display: inline-block;
+  width: 15%;
+  color: black;
+  font-weight: 600;
+}
+
+section {
+  background-color: snow;
+  height: 40px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: snow;
+  letter-spacing: 0.11rem;
+}
+
+button {
+  font-family: 'Montserrat', 'Avenir', sans-serif;
+  border: none;
+  background: none;
+  font-size: inherit;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: steelblue;
+  padding: 5px;
+  margin: 0;
+  height: 100%;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  transition: all 0.9s;
+  outline: none;
+}
+
+button:hover {
+  background-color: steelblue;
+  color: snow;
 }
 
 .square {
   width: 30%;
-  background-color: purple;
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
-  border-radius: 10px;
+  border-radius: 15%;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  transition: background 0.5s;
 }
 
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.selected {
+  background-color: steelblue;
+  color: snow;
 }

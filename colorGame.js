@@ -1,4 +1,5 @@
-let colors = generateColors(6);
+let numSquares = [6, 3];
+let colors = generateColors(numSquares[0]);
 
 let squares = document.querySelectorAll('.square');
 
@@ -9,6 +10,78 @@ let feedback = document.getElementById('feedback');
 let topDiv = document.querySelector('.top');
 
 let color = document.getElementById('color');
+
+let resetBtn = document.querySelector('#reset');
+
+let hardBtn = document.querySelector('#hard');
+
+let easyBtn = document.querySelector('#easy');
+
+resetBtn.textContent = 'New Colors';
+
+// Easy game mode for 3 colors
+easyBtn.addEventListener('click', function() {
+  //select easy button
+  easyBtn.classList.add('selected');
+
+  // remove selection from hard button
+  hardBtn.classList.remove('selected');
+
+  //generate and change colors on page
+  colors = generateColors(numSquares[1]);
+
+  //pick a new random color from array
+  pickedColor = randomColor();
+  color.textContent = pickedColor;
+  console.log(colors, pickedColor);
+  for (let i = 0; i < squares.length; i++) {
+    if (colors[i]) {
+      squares[i].style.backgroundColor = colors[i];
+    } else {
+      // hide 3 botton squares
+      squares[i].style.display = 'none';
+    }
+  }
+});
+
+//hard game mode for 6 colors
+hardBtn.addEventListener('click', function() {
+  //select hard button
+  hardBtn.classList.add('selected');
+
+  // remove selection from easy button
+  easyBtn.classList.remove('selected');
+
+  //generate and change colors on page
+  colors = generateColors(numSquares[0]);
+
+  //pick a new random color from array
+  pickedColor = randomColor();
+  color.textContent = pickedColor;
+
+  //show all squares with new colors
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+    squares[i].style.display = 'block';
+  }
+});
+
+resetBtn.addEventListener('click', function() {
+  //generate and change colors on page
+  colors = generateColors(numSquares[0]);
+
+  //pick a new random color form array
+  pickedColor = randomColor();
+  color.textContent = pickedColor;
+  for (let i = 0; i < squares.length; i++) {
+    //assign colors to squares
+    squares[i].style.backgroundColor = colors[i];
+  }
+  topDiv.style.backgroundColor = 'steelblue';
+  this.textContent = 'New Colors';
+  feedback.textContent = '';
+});
+
 color.textContent = pickedColor;
 
 for (let i = 0; i < squares.length; i++) {
@@ -24,8 +97,9 @@ for (let i = 0; i < squares.length; i++) {
       feedback.textContent = 'Correct!';
       changeColors(clickedColor);
       topDiv.style.backgroundColor = clickedColor;
+      resetBtn.textContent = 'Play again?';
     } else {
-      this.style.backgroundColor = '#232323';
+      this.style.backgroundColor = '#dcdcdc';
       feedback.textContent = 'Try again';
     }
   });
