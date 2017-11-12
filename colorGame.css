@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #232323;
+  color: snow;
+}
+
+h1,
+h2 {
+  text-align: center;
+  letter-spacing: 0.15rem;
+}
+
+.square {
+  width: 30%;
+  background-color: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
