@@ -52,6 +52,7 @@ function setUp() {
         resetBtn.textContent = 'Play again?';
       } else {
         this.style.backgroundColor = '#dcdcdc';
+        // this.style.border = '1px solid transparent';
         feedback.textContent = 'Try again';
       }
     }); //end of eventListener for squares
