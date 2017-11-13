@@ -66,7 +66,7 @@ button {
   outline: none;
 }
 
-button:hover {
+.mode:hover {
   background-color: steelblue;
   color: snow;
 }
@@ -101,11 +101,36 @@ button:focus {
   color: snow;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
+  .mode,
+  #feedback {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  section {
+    height: auto;
+  }
+
   button {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   h1 {
+    font-size: 1.1rem;
+  }
+
+  #color {
     font-size: 1.5rem;
+  }
+
+  .top {
+    height: auto;
+  }
+
+  .square {
+    width: 30%;
+    margin: 1.5%;
+    padding-bottom: 25%;
   }
 }
