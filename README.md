@@ -1,4 +1,4 @@
-<h1><a href="https://www" target="_blank" rel="noopener">Guess Color game</a></h1>
+<h1><a href="https://ng-sf.github.io/guessColor/" target="_blank" rel="noopener">Guess Color game</a></h1>
 
 ## Technology Used  🛠
 <ul>
@@ -10,4 +10,4 @@
 
 <h3>Website is fully responsive and adaptive to all mobile, tablet, and desktop viewports.</h3>
 
-![screenshot](/data/bg.jpg)
+![screenshot](/data/screen.png)
