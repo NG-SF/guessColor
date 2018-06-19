@@ -10,4 +10,4 @@
 
 <h3>Website is fully responsive and adaptive to all mobile, tablet, and desktop viewports.</h3>
 
-![screenshot](/data/screen.png)
+![screenshot](/docs/screen.png)
