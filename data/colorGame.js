@@ -4,7 +4,6 @@ let pickedColor;
 
 let squares = document.querySelectorAll('.square');
 let feedback = document.getElementById('feedback');
-let topDiv = document.querySelector('.top');
 let color = document.getElementById('color');
 let resetBtn = document.querySelector('#reset');
 let modeBtns = document.querySelectorAll('.mode');
@@ -48,9 +47,9 @@ function setUp() {
       if (clickedColor === pickedColor) {
         feedback.textContent = 'Correct!';
         changeColors(clickedColor);
-        topDiv.style.backgroundColor = clickedColor;
         resetBtn.textContent = 'Play again?';
-      } else {
+      } 
+      else {
         this.style.backgroundColor = '#dcdcdc';
         // this.style.border = '1px solid transparent';
         feedback.textContent = 'Try again';
@@ -72,13 +71,13 @@ function reset() {
       // show all squares
       squares[i].style.display = 'block';
       squares[i].style.backgroundColor = colors[i];
-    } else {
+    } 
+    else {
       // hide 3 bottom squares for easy mode
       squares[i].style.display = 'none';
     }
   } // end of for loop
   color.textContent = pickedColor;
-  topDiv.style.backgroundColor = 'steelblue';
   resetBtn.textContent = 'New Colors';
   feedback.textContent = '';
 } // end of reset function
